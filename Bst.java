@@ -41,7 +41,7 @@ public class Bst {
             in.close();
         }
         catch(Exception NoSuchAlgorithmException){
-]        }
+        }
 
     }
 }
