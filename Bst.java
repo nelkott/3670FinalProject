@@ -1,8 +1,18 @@
+/**
+ * This class implements the Tree class.
+ * A Tree is created using some data, the user can then try checking if a block
+ * exists in this tree by specifying block value and index.
+ * A temporary tree is created based on the original one except that the new value replaces
+ * the value inside the index the user specified.
+ * The root hashes of both trees are compared and whether it matches or not, the user is informed.
+ */
 import java.util.*;
 
 public class Bst {
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
+        //data
+        //make sure they dont exceed 8
         List<String> list = new ArrayList<String>();
         list.add("A");
         list.add("B");
@@ -10,6 +20,7 @@ public class Bst {
         list.add("D");
         list.add("E");
 
+        //orginal tree
         Tree tree = new Tree();
 
         try{
