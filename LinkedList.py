@@ -9,7 +9,9 @@ class Node:
         self.next = None
         
     def __repr__(self) -> str:
-        return "Amount: " + self.data + " Owner: " + self.currowner +  " Time bought: " +  self.time
+        if self.pre is None:
+            return "Amount: " + self.data + " Owner: " + self.currowner +  " Time bought: " +  self.time + "Previous Owner: " + "None"
+        return "Amount: " + self.data + " Owner: " + self.currowner +  " Time bought: " +  self.time + "Previous Owner: " + self.pre.currowner
 
 class LinkedList:
     def __init__(self, values=None):
@@ -38,6 +40,7 @@ class LinkedList:
         for curr in self:
             pass
         curr.next = node
+        curr.next.pre = curr
     
 blockchain = LinkedList()
 
